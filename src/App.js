@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route, Redirect, NavLink } from "react-router-dom";
 
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
 function App() {
-  /*
+	/*
   Define state variables for 
   contacts and appointments 
   */
+	const [contacts, setContacts] = useState([
+		{
+			id: 1,
+			name: "Engracia Petranek",
+			email: "epetranek0@hubpages.com",
+			phone: "949-402-2282",
+		},
+		{
+			id: 2,
+			name: "Emilie Grzegorczyk",
+			email: "egrzegorczyk1@liveinternet.ru",
+			phone: "530-714-9443",
+		},
+		{
+			id: 3,
+			name: "Drake Stannard",
+			email: "dstannard2@google.co.uk",
+			phone: "464-347-4756",
+		},
+	]);
 
   const ROUTES = {
     CONTACTS: "/contacts",
