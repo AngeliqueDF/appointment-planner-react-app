@@ -40,6 +40,9 @@ function App() {
   Implement functions to add data to
   contacts and appointments
   */
+	function addContact(newContact) {
+		setContacts((prev) => [newContact, ...prev]);
+	}
 
   return (
     <>
