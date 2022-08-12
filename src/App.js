@@ -43,6 +43,9 @@ function App() {
 	function addContact(newContact) {
 		setContacts((prev) => [newContact, ...prev]);
 	}
+	function addAppointments(newAppointment) {
+		setAppointments((prev) => [newAppointment, ...prev]);
+	}
 
   return (
     <>
