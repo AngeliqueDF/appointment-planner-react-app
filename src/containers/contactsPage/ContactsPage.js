@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ContactForm } from "../../components/contactForm/ContactForm";
 
 export const ContactsPage = ({ contacts, addContact }) => {
@@ -19,10 +19,20 @@ export const ContactsPage = ({ contacts, addContact }) => {
     */
   };
 
-  /*
+	/*
   Using hooks, check for contact name in the 
   contacts array variable in props
   */
+	useEffect(() => {
+		const nameIsDuplicate = contacts
+			.map((contact) => contact.name)
+			.includes(name);
+		if (nameIsDuplicate) {
+			return setDuplicateName(true);
+		}
+		setDuplicateName(false);
+	});
+
 	return (
 		<div>
 			<section>
