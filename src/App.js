@@ -29,6 +29,7 @@ function App() {
 			phone: "464-347-4756",
 		},
 	]);
+	const [appointments, setAppointments] = useState([]);
 
   const ROUTES = {
     CONTACTS: "/contacts",
