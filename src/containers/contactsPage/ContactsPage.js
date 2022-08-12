@@ -11,13 +11,19 @@ export const ContactsPage = ({ contacts, addContact }) => {
 	const [phone, setPhone] = useState("");
 	const [email, setEmail] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    /*
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		/*
     Add contact info and clear data
     if the contact name is not a duplicate
     */
-  };
+		if (duplicateName) return;
+		const { name, phone, email } = e.target;
+		addContact({ name: name.value, phone: phone.value, email: email.value });
+		setName("");
+		setPhone("");
+		setEmail("");
+	};
 
 	/*
   Using hooks, check for contact name in the 
