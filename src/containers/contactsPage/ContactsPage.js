@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ContactForm } from "../../components/contactForm/ContactForm";
 
 export const ContactsPage = ({ contacts, addContact }) => {
 	/*
@@ -22,16 +23,25 @@ export const ContactsPage = ({ contacts, addContact }) => {
   Using hooks, check for contact name in the 
   contacts array variable in props
   */
+	return (
+		<div>
+			<section>
+				<h2>Add Contact</h2>
 
-  return (
-    <div>
-      <section>
-        <h2>Add Contact</h2> 
-      </section>
-      <hr />
-      <section>
-        <h2>Contacts</h2>
-      </section>
-    </div>
-  );
+				<ContactForm
+					name={name}
+					setName={setName}
+					phone={phone}
+					setPhone={setPhone}
+					email={email}
+					setEmail={setEmail}
+					handleSubmit={handleSubmit}
+				/>
+			</section>
+			<hr />
+			<section>
+				<h2>Contacts</h2>
+			</section>
+		</div>
+	);
 };
