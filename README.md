@@ -1,4 +1,4 @@
-# Appointment planner React Redux app
+# Appointment planner React app
 
 <div align="center">
   <img src="./src/images/logo-html5.svg">
