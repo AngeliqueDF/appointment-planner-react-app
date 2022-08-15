@@ -29,7 +29,32 @@ function App() {
 			phone: "464-347-4756",
 		},
 	]);
-	const [appointments, setAppointments] = useState([]);
+	const [appointments, setAppointments] = useState([
+		{
+			id: 1,
+			title: "Namfix",
+			date: "1/24/2022",
+			time: "4:57 PM",
+		},
+		{
+			id: 2,
+			title: "Asoka",
+			date: "8/18/2021",
+			time: "8:56 PM",
+		},
+		{
+			id: 3,
+			title: "Tin",
+			date: "9/5/2021",
+			time: "10:11 PM",
+		},
+		{
+			id: 4,
+			title: "Lotstring",
+			date: "6/3/2022",
+			time: "1:51 AM",
+		},
+	]);
 
 	const ROUTES = {
 		CONTACTS: "/contacts",
