@@ -1,4 +1,5 @@
 import React from "react";
+import { ContactPicker } from "./../contactPicker/ContactPicker";
 
 export const AppointmentForm = ({
 	contacts,
@@ -19,8 +20,20 @@ export const AppointmentForm = ({
 		return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
 	};
 
+	function handleContactChange(e) {
+		if (e.target.value === "Choose a contact") {
+			setContact("");
+		}
+		setContact(e.target.value);
+	}
+
 	return (
 		<form onSubmit={handleSubmit}>
+			<ContactPicker
+				contact={contact}
+				contacts={contacts}
+				onChange={handleContactChange}
+			/>
 			<input
 				type="text"
 				name="title"
