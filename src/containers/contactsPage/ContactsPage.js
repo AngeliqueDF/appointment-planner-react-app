@@ -38,7 +38,7 @@ export const ContactsPage = ({ contacts, addContact }) => {
 			return setDuplicateName(true);
 		}
 		setDuplicateName(false);
-	});
+	}, [contacts, name]);
 
 	return (
 		<div>
@@ -58,7 +58,7 @@ export const ContactsPage = ({ contacts, addContact }) => {
 			<hr />
 			<section>
 				<h2>Contacts</h2>
-				<TileList contacts={contacts} />
+				<TileList itemsArray={contacts} />
 			</section>
 		</div>
 	);
