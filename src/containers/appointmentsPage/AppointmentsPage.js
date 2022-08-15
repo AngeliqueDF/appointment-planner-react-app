@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
-export const AppointmentsPage = () => {
-  /*
+import { AppointmentForm } from "./../../components/appointmentForm/AppointmentForm";
+import { TileList } from "../../components/tileList/TileList";
+
+export const AppointmentsPage = ({
+	contacts,
+	appointments,
+	addAppointments,
+}) => {
+	/*
   Define state variables for 
   appointment info
   */
