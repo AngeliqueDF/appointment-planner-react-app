@@ -63,6 +63,7 @@ export const AppointmentsPage = ({
 			<hr />
 			<section>
 				<h2>Appointments</h2>
+				<TileList itemsArray={appointments} />
 			</section>
 		</div>
 	);
