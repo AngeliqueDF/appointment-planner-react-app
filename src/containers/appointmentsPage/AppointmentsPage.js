@@ -25,17 +25,6 @@ export const AppointmentsPage = ({
 		/*
     Add contact info and clear data  
     */
-  return (
-    <div>
-      <section>
-        <h2>Add Appointment</h2>
-      </section>
-      <hr />
-      <section>
-        <h2>Appointments</h2>
-      </section>
-    </div>
-  );
 		if (title === "" || contact === "" || date === "" || time === "") {
 			return;
 		}
@@ -54,4 +43,27 @@ export const AppointmentsPage = ({
 		setTime("");
 	};
 
+	return (
+		<div>
+			<section>
+				<h2>Add Appointment</h2>
+				<AppointmentForm
+					contacts={contacts}
+					title={title}
+					setTitle={setTitle}
+					contact={contact}
+					setContact={setContact}
+					date={date}
+					setDate={setDate}
+					time={time}
+					setTime={setTime}
+					handleSubmit={handleSubmit}
+				/>
+			</section>
+			<hr />
+			<section>
+				<h2>Appointments</h2>
+			</section>
+		</div>
+	);
 };
