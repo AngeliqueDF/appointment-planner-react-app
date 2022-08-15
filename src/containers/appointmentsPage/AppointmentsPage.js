@@ -14,20 +14,17 @@ export const AppointmentsPage = ({
   */
 	const [title, setTitle] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    /*
 	const [contact, setContact] = useState("");
 
 	const [date, setDate] = useState("");
 
 	const [time, setTime] = useState("");
 
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		/*
     Add contact info and clear data  
     */
-   
-  };
-
   return (
     <div>
       <section>
@@ -39,4 +36,22 @@ export const AppointmentsPage = ({
       </section>
     </div>
   );
+		if (title === "" || contact === "" || date === "" || time === "") {
+			return;
+		}
+
+		addAppointments({
+			id: Number((Math.random() * 100).toFixed(0)),
+			title,
+			contact,
+			date,
+			time,
+		});
+
+		setTitle("");
+		setContact("");
+		setDate("");
+		setTime("");
+	};
+
 };
