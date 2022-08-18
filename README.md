@@ -1,6 +1,8 @@
 # Appointment planner React app
 
-<img src="https://user-images.githubusercontent.com/39645777/185409457-ca86c81a-a103-4140-b2ef-2855b5537d2c.png" width="30%" />
+<p text-align="center">
+  <img src="https://user-images.githubusercontent.com/39645777/185409457-ca86c81a-a103-4140-b2ef-2855b5537d2c.png" width="30%" />
+</p>
 
 <div align="center">
   <img src="./src/images/logo-html5.svg">
